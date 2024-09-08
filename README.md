@@ -12,9 +12,6 @@ This environment was created with flexibility in mind, allowing developers to ta
 
 ## Key Features
 
-### Level 3 Exploits Only
-Apost Environment is currently optimized for **Level 3 exploits**. This means that it allows developers to access and manipulate parts of the Roblox game, but it is not intended for higher-level exploits that require deeper access to the game’s internals. Because of this, it’s important for developers to know what kind of exploit they are working with. If you try to use Apost’s functions with a higher-level exploit, you might run into problems or unexpected behavior.
-
 ### No External Backend Needed
 A major advantage of Apost Environment is that it doesn’t rely on any external backend, such as bridges or external APIs, to function. This means that everything happens **locally**, right on your machine. This makes the environment easier to set up and use, and it also offers a higher degree of privacy and control. You won’t need to send data back and forth to servers or depend on third-party tools to get your exploit to work—everything you need is built into Apost.
 
