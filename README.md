@@ -4,7 +4,10 @@ Apost Environment is the first open-source exploit environment built for Exploit
 
 This environment was created with flexibility in mind, allowing developers to tailor the functions for specific use cases. As the first of its kind, Apost Environment helps developers explore new possibilities in Roblox exploiting by making it easier to work on Level 3 exploits without needing extra, external support.
 
-> [!INFORMATION]  
+> [!WARNING]  
+> Some functions may not work if Dependencies are not added, you can add them by copying the code from `Dependencies.luau` and putting it at the start of your Init Script/Environment Script
+
+> [!NOTE]  
 > Certain functions such as `hookfunction`, `hookmetatable` and `getnamecallmethod` may not work based on your executor level!
 
 ## Key Features
