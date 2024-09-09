@@ -1,3 +1,5 @@
+-- This function requires a dependency found in the Dependencies.luau file! It will not function properly without them
+
 function setreadonly(tbl, readOnly)
     if readOnly then
         saved_data.ReadOnly[tbl] = true
