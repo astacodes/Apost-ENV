@@ -28,7 +28,7 @@ end
 
 function crypt.base64.decode(data)
 	return base64decode(data)
-en
+end
 
 function base64_decode(data)
     return base64decode(data)
