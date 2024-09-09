@@ -1,14 +1,16 @@
+cached_instances = {}
+
 function getnilinstances()
-	datamodel={game}
+    datamodel={game}
 
     game.DescendantRemoving:Connect(
         function(a)
-            cache[a] = "REMOVE"
+            cached_instances[a] = "REMOVE"
         end
     )
     game.DescendantAdded:Connect(
         function(a)
-            cache[a] = true
+            cached_instances[a] = true
             table.insert(datamodel, a)
         end
     )
@@ -17,12 +19,12 @@ function getnilinstances()
         table.insert(datamodel, c)
     end
 
-	local nilinstances = {}
+    local nilinstances = {}
 
-	for i, v in pairs(datamodel) do
-		if v.Parent ~= nil then continue end
-		table.insert(nilinstances, v)
-	end 
+    for i, v in pairs(datamodel) do
+        if v.Parent ~= nil then continue end
+        table.insert(nilinstances, v)
+    end 
     
-	return nilinstances
+    return nilinstances
 end
