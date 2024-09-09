@@ -5,6 +5,10 @@ local saved_data = {
     Luau_setmetatable = setmetatable
 }
 
+function isreadonly(tbl)
+    return saved_data.ReadOnly[tbl] or table.isfrozen(tbl) or false
+end
+
 function setreadonly(tbl, readOnly)
     if readOnly then
         saved_data.ReadOnly[tbl] = true
