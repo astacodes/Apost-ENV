@@ -7,24 +7,4 @@ local saved_data = {
     Luau_setmetatable = setmetatable
 }
 
-local cache = {cached = {}}
 local identity = 3
-local nilinstances = {}
-
-game.DescendantRemoving:Connect(function(des)
-	table.insert(nilinstances, des)
-	delay(15, function()
-		local index = table.find(nilinstances, des)
-		if index then
-			table.remove(nilinstances, index)
-		end
-		if cache.cached[des] then
-			cache.cached[des] = nil
-		end
-	end)
-	cache.cached[des] = "r"
-end)
-
-game.DescendantAdded:Connect(function(des)
-	cache.cached[des] = true
-end)
