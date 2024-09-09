@@ -1,16 +1,5 @@
 -- Dependencies | Certain functions will not function properly without this, add it add the top of your environment!
 
-local UserInputService = game:GetService("UserInputService")
-local WindowActive = true
-
-UserInputService.WindowFocused:Connect(function()
-	WindowActive = true
-end)
-
-UserInputService.WindowFocusReleased:Connect(function()
-	WindowActive = false
-end)
-
 local saved_data = {
     Saved_Metatable = {},
     ReadOnly = {},
