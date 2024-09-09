@@ -1,6 +1,5 @@
 -- Dependencies | Certain functions will not function properly without this, add it add the top of your environment!
 
-local VirtualInputManager = Instance.new("VirtualInputManager")
 local UserInputService = game:GetService("UserInputService")
 local WindowActive = true
 
