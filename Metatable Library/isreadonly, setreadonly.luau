@@ -1,4 +1,9 @@
--- This function requires a dependency found in the Dependencies.luau file! It will not function properly without them
+local saved_data = {
+    Saved_Metatable = {},
+    ReadOnly = {},
+    OriginalTables = {},
+    Luau_setmetatable = setmetatable
+}
 
 function setreadonly(tbl, readOnly)
     if readOnly then
