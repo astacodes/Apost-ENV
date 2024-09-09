@@ -1,4 +1,13 @@
--- This function requires a dependencies found in the __dependencies.luau file in the parent folder! It will not function properly without them
+local UserInputService = game:GetService("UserInputService")
+local WindowActive = true
+
+UserInputService.WindowFocused:Connect(function()
+	WindowActive = true
+end)
+
+UserInputService.WindowFocusReleased:Connect(function()
+	WindowActive = false
+end)
 
 function isrbxactive()
 	return windowActive
