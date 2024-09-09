@@ -1,4 +1,73 @@
--- This function requires a dependency found in the Dependencies.luau file! It will not function properly without them
+local drawingUI = Instance.new("ScreenGui")
+
+drawingUI.Name = "Drawing"
+drawingUI.IgnoreGuiInset = true
+drawingUI.DisplayOrder = 0x7fffffff
+drawingUI.Parent = coreGui
+local drawingIndex = 0
+local uiStrokes = table.create(0)
+local baseDrawingObj = setmetatable({
+	Visible = true,
+	ZIndex = 0,
+	Transparency = 1,
+	Color = Color3.new(),
+	Remove = function(self)
+		setmetatable(self, nil)
+	end
+}, {
+	__add = function(t1, t2)
+		local result = table.clone(t1)
+		for index, value in t2 do
+			result[index] = value
+		end
+		return result
+	end
+})
+local drawingFontsEnum = {
+	[0] = Font.fromEnum(Enum.Font.Roboto),
+	[1] = Font.fromEnum(Enum.Font.Legacy),
+	[2] = Font.fromEnum(Enum.Font.SourceSans),
+	[3] = Font.fromEnum(Enum.Font.RobotoMono),
+}
+
+local function getFontFromIndex(fontIndex: number): Font
+	return drawingFontsEnum[fontIndex]
+end
+
+local function convertTransparency(transparency: number): number
+	return math.clamp(1 - transparency, 0, 1)
+end
+
+local DrawingLib = {}
+
+DrawingLib.Fonts = {
+	["UI"] = 0,
+	["System"] = 1,
+	["Plex"] = 2,
+	["Monospace"] = 3
+}
+
+local drawings = {}
+
+function cleardrawcache()
+    for _, v in pairs(drawings) do
+        v:Remove()
+    end
+    table.clear(drawings)
+end
+
+function isrenderobj(thing)
+    return drawings[thing] ~= nil
+end
+
+Drawing = {}
+
+Drawing.Fonts = {
+    ['UI'] = 0,
+    ['System'] = 1,
+    ['Plex'] = 2,
+    ['Monospace'] = 3
+}
 
 function Drawing.new(drawingType)
     drawingIndex += 1
