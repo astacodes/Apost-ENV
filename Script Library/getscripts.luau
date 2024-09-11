@@ -1,4 +1,3 @@
-
 function getscripts()
     local scripts = {}
     for _, scriptt in game:GetDescendants() do
