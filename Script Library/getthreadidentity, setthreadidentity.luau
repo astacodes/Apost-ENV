@@ -1,4 +1,4 @@
-identity = 3
+local identity = 3
 
 function getthreadidentity()
     return identity
