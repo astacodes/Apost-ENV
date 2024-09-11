@@ -125,7 +125,7 @@ function debug.getmetatable(tableorud)
     end)
     real_metamethods.__type = typeof(tableorud)
 
-    real_metamethods.__metatable = getmetatable(game) -- "The metatable is locked"
+    real_metamethods.__metatable = getmetatable(game)
 
     real_metamethods.__tostring = function()
         return tostring(tableorud)
