@@ -5,6 +5,9 @@ Apost Environment is the first open-source exploit environment built for Exploit
 This environment was created with flexibility in mind, allowing developers to tailor the functions for specific use cases. As the first of its kind, Apost Environment helps developers explore new possibilities in Roblox exploiting by making it easier to work on exploits without needing extra, external support.
 
 > [!NOTE]  
+> Not all functions are tested, if you experience an issue that does not relate to your executors level, create an issue!
+
+> [!NOTE]  
 > Certain functions such as `hookfunction`, `hookmetatable` and the `debug` library may not work based on your executor level!
 
 ## Key Features
