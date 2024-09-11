@@ -1,3 +1,5 @@
+-- Note: I did not the renv table, credits to whoever did
+
 local renv = {
 	print = print, warn = warn, error = error, assert = assert, collectgarbage = collectgarbage, require = require,
 	select = select, tonumber = tonumber, tostring = tostring, type = type, xpcall = xpcall,
