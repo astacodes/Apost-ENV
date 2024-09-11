@@ -31,7 +31,7 @@ function debug.getstack(level)
 			is_vararg = info.isvararg
 		})
 		else
-		break
+			break
 		end
 	end
 	
