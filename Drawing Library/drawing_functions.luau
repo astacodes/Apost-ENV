@@ -1,5 +1,6 @@
-local drawingUI = Instance.new("ScreenGui")
+-- Note: I did not make this one, credits to whoever did
 
+local drawingUI = Instance.new("ScreenGui")
 drawingUI.Name = "Drawing"
 drawingUI.IgnoreGuiInset = true
 drawingUI.DisplayOrder = 0x7fffffff
