@@ -1,3 +1,5 @@
+-- Note: I did not make this one, credits to whoever did
+
 function setscriptable(instance, property, scriptable)
     local className = instance.ClassName
         if not scriptableProperties[className] then
