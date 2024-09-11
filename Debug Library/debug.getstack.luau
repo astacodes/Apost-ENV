@@ -9,3 +9,32 @@ function debug.getstack(l, i)
     end
     return i and s[i] or s
 end
+
+--[[ Optional - Another GetStack Method - Credit to Ignite
+function debug.getstack(level)
+	if type(level) ~= "number" or level < 1 then
+	    error("Invalid level. Must be a positive number.")
+	end
+
+	local stackInfo = {}
+
+	for i = 1, level do
+		local info = debug.getinfo(i, "snl")
+		if info then
+		table.insert(stackInfo, {
+			source = (info.source == "[C]" and "@[C]") or info.source,
+		short_src = info.short_src,
+			currentline = info.currentline,
+			name = info.name,
+			what = info.what,
+			numparams = info.nparams,
+			is_vararg = info.isvararg
+		})
+		else
+		break
+		end
+	end
+	
+	return stackInfo
+end
+--]]
