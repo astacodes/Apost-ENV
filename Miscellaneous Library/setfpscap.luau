@@ -1,3 +1,5 @@
+-- Note: I did not make this one, credits to whoever did
+
 function setfpscap(fps)
     TARGET_FRAME_RATE = fps
     if connection then
