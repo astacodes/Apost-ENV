@@ -3,7 +3,7 @@
 function debug.getmetatable(tableorud)
     local result = getmetatable(tableorud)
 
-    if result == nil then -- No meta
+    if result == nil then
         return
     end
 
