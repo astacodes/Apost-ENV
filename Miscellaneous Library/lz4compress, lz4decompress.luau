@@ -1,3 +1,5 @@
+-- Note: I did not make this one, credits to whoever did
+
 type Streamer = {
 	Offset: number,
 	Source: string,
