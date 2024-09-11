@@ -22,7 +22,7 @@ end
 
 function crypt.base64.encode(data)
 	return base64encode(data)
-en
+end
 
 function base64_encode(data)
     return base64encode(data)
