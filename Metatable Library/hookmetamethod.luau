@@ -1,3 +1,5 @@
+-- Credits to Rebel
+
 function hookmetamethod(obj, method, rep)
     local mt = getrawmetatable(obj)
     local old = mt[method]
