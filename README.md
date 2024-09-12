@@ -5,7 +5,7 @@ Apost Environment is the first open-source exploit environment built for Exploit
 This environment was created with flexibility in mind, allowing developers to tailor the functions for specific use cases. As the first of its kind, Apost Environment helps developers explore new possibilities in Roblox exploiting by making it easier to work on exploits without needing extra, external support.
 
 > [!WARNING]  
-> These functions are in Lua and are a lot of them are atleast partly fake. 
+> These functions are in Lua and some of them are quite shit.
 
 ## Key Features
 
